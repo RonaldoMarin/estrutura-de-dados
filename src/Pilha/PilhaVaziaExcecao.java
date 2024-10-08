@@ -6,3 +6,4 @@ public class PilhaVaziaExcecao extends RuntimeException {
         super(err);
     }
 }
+

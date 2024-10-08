@@ -7,3 +7,4 @@ public interface Pilha {
     public Object pop() throws PilhaVaziaExcecao;
     public Object top() throws PilhaVaziaExcecao;
 }
+
