@@ -1,4 +1,4 @@
-## One Question
+## Descreva o estado da pilha (inicialmente vazia) após cada uma das operações a seguir
 
 | Interaction | Command | Stack        |   
 |-------------|---------|--------------|
