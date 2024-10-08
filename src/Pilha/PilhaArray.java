@@ -1,13 +1,13 @@
 package Pilha;
 
 public class PilhaArray implements Pilha{
-    private int tamanhoPilha;
     private Object[] lista;
     private int topo = -1;
+    private int incremento;
 
     public PilhaArray(int capacidade){
-        this.tamanhoPilha = capacidade;
-        this.lista = new Object[this.tamanhoPilha];
+        this.lista = new Object[capacidade];
+        this.incremento = 0;
     }
 
     //Retorna true or false if top
@@ -33,10 +33,19 @@ public class PilhaArray implements Pilha{
 
     @Override
     public void push(Object elemento) {
-        if (this.topo == this.tamanhoPilha - 1) {
-            throw new PilhaVaziaExcecao("Agora ta cheinha cheinha");
+        if (this.topo == this.lista.length - 1) {
+            Object[] newStack;
+            if (this.incremento > 0){
+                newStack = new Object[this.lista.length + this.incremento];
+            } else{
+                newStack = new Object[this.lista.length * 2];
+            }
+            for (int i = 0; i < this.lista.length; i++) {
+                newStack[i] = this.lista[i];
+            }
+            this.lista = newStack;
         }
-        this.topo = this.topo + 1;
+        this.topo++;
         this.lista[this.topo] = elemento;
     }
 
