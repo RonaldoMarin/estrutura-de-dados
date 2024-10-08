@@ -1,5 +1,4 @@
 package Pilha;
-import Pilha.PilhaVaziaExcecao;
 
 public class PilhaArray implements Pilha{
     private int tamanhoPilha;
@@ -32,4 +31,32 @@ public class PilhaArray implements Pilha{
         return this.lista[this.topo];
     }
 
+    @Override
+    public void push(Object elemento) {
+        if (this.topo == this.tamanhoPilha - 1) {
+            throw new PilhaVaziaExcecao("Agora ta cheinha cheinha");
+        }
+        this.topo = this.topo + 1;
+        this.lista[this.topo] = elemento;
+    }
+
+    @Override
+    public Object pop() {
+        if(this.isEmpty()){
+            throw new PilhaVaziaExcecao("A pilha está vazia!");
+        }
+        Object temp = lista[this.topo];
+        this.lista[this.topo] = null;
+        this.topo--;
+        return temp;
+    }
+
+    public void printPilha(){
+        if (this.isEmpty()){
+            throw new PilhaVaziaExcecao("A pilha está vazia!");
+        }
+        for (int i = 0 ; i < this.size() ; i++){
+            System.out.print(this.lista[i] + " ");
+        }
+    }
 }
