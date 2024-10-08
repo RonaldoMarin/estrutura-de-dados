@@ -10,19 +10,16 @@ public class PilhaArray implements Pilha{
         this.incremento = 0;
     }
 
-    //Retorna true or false if top
     @Override
     public boolean isEmpty() {
         return this.topo == -1;
     }
 
-    //Return sum top + 1
     @Override
     public int size() {
         return this.topo + 1;
     }
 
-    //Verify
     @Override
     public Object top(){
         if(this.isEmpty()){
