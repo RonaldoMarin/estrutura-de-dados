@@ -6,7 +6,7 @@ public class TestPilha {
 
         System.out.println("Inserindo");
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100000; i++) {
             pilha.push(i);
         }
         long endTime = System.currentTimeMillis();
