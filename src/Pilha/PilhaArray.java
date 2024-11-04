@@ -37,6 +37,9 @@ public class PilhaArray implements Pilha{
             } else{
                 newStack = new Object[this.lista.length * 2];
             }
+
+            // this.incremento > 0 ? newStack = new Object[this.lista.length + this.incremento] : newStack = new Object[this.lista.length * 2]
+
             for (int i = 0; i < this.lista.length; i++) {
                 newStack[i] = this.lista[i];
             }
