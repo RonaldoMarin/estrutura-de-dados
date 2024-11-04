@@ -2,11 +2,11 @@ package Pilha;
 
 public class TestPilha {
     public static void main(String[] args) {
-        PilhaArray pilha = new PilhaArray(2);
+        PilhaArray pilha = new PilhaArray(1);
 
         System.out.println("Inserindo");
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             pilha.push(i);
         }
         long endTime = System.currentTimeMillis();

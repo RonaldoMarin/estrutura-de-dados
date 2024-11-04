@@ -22,4 +22,10 @@
 | 17          | pop()   | [5]          |
 
 
-## 
+## Utilizando os arquivos PilhaArray.java, Pilha.java, TestePilha.java, preencha a tabela abaixo, onde a linha superior diz o método de aumento da capacidade e a coluna da esquerda informa a quantidade de elementos colocados na pilha. Em cada célula da tabela deverá ser colocado o tempo, em milisegundos (use System.currentTimeMillis()), de se colocar os elementos. Utilize as duas estratégias de crescimento (constante e duplicação) para oray.
+
+10 Elementos - 10 Incremento: 0ms
+10 Elementos - 100 Incremento: 0ms
+10 Elementos - 1000 Incremento: 1ms
+10 Elementos - 10000 Incremento: 4ms
+10 Elementos - Duplicação: 
