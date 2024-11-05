@@ -23,7 +23,7 @@ public class FilaArray implements Fila{
 
     @Override
     public int size(){
-        return (this.filaLista.length - this.inicio +this.fim) % this.filaLista.length;
+        return (this.filaLista.length - this.inicio + this.fim) % this.filaLista.length;
     }
 
     @Override
