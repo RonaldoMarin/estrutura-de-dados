@@ -39,7 +39,7 @@ public class Vetor implements VetorInterface{
         // Verifica se o rank é maior que a capacidade do array
         if (rank >= this.vetorArray.length){
             throw  new VetorException("Índice inexistente no vetor");
-        }""
+        }
 
         // Aqui é pra se o elemento estiver no fim, ele so insere sem precisar copiar o array
         if (rank >= this.fim){
