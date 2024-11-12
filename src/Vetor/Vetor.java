@@ -23,11 +23,15 @@ public class Vetor implements VetorInterface{
 
     @Override
     public Object atRank(int rank){
+        if (isEmpty()){
+            throw new VetorException("Vetor vazio");
+        }
         // Isso aqui considerando que n-1 é onde está contido o último elemento do array;
-        if (rank >= this.fim){
+        if (rank < 0 || rank >= this.fim){
             throw new VetorException("Índice inexistente no vetor");
         }
-        return this.vetorArray[rank];
+        int rankCircular = (this.inicio + rank) % this.vetorArray.length;
+        return this.vetorArray[rankCircular];
     }
 
     @Override
@@ -35,7 +39,7 @@ public class Vetor implements VetorInterface{
         // Verifica se o rank é maior que a capacidade do array
         if (rank >= this.vetorArray.length){
             throw  new VetorException("Índice inexistente no vetor");
-        }
+        }""
 
         // Aqui é pra se o elemento estiver no fim, ele so insere sem precisar copiar o array
         if (rank >= this.fim){
