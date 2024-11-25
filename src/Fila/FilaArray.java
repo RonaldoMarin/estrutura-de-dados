@@ -46,7 +46,7 @@ public class FilaArray implements Fila{
 
     @Override
     public void enqueue(Object o){
-        if(this.filaLista.length == this.capacidade){
+        if(this.size() == (this.capacidade - 1)){
             Object[] newFila = new Object[this.capacidade*2];
 
             int aux = this.inicio;
@@ -63,6 +63,11 @@ public class FilaArray implements Fila{
         this.filaLista[this.fim] = o;
         this.fim = (this.fim + 1) % this.filaLista.length;
     }
+
+    public int seeQuantity(){
+        return this.filaLista.length;
+    }
+
 
     public void printQueue() {
         if (this.inicio == this.fim) {

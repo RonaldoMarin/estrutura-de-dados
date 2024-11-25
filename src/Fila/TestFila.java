@@ -8,7 +8,7 @@ public class TestFila {
         System.out.println("Capacidade: " + fila.capacidade);
 
         long startTime = System.currentTimeMillis();
-        for (int i = 0 ; i < 11 ; i++){
+        for (int i = 0 ; i < 41 ; i++){
             fila.enqueue(i);
         }
         long endTime = System.currentTimeMillis();
@@ -24,5 +24,6 @@ public class TestFila {
 
         fila.printQueue();
         System.out.println("Capacidade: " + fila.capacidade);
+        System.out.println("Capacidade: " + fila.seeQuantity());
     }
 }
