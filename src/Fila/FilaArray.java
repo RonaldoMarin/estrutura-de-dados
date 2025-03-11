@@ -11,7 +11,7 @@ public class FilaArray implements Fila{
     public FilaArray(int capacidade){
         this.capacidade = capacidade;
         this.filaLista = new Object[capacidade];
-        this.inicio = 0;
+        this.  inicio = 0;
         this.fim = 0;
         this.incremento = 0;
     }
@@ -63,11 +63,6 @@ public class FilaArray implements Fila{
         this.filaLista[this.fim] = o;
         this.fim = (this.fim + 1) % this.filaLista.length;
     }
-
-    public int seeQuantity(){
-        return this.filaLista.length;
-    }
-
 
     public void printQueue() {
         if (this.inicio == this.fim) {

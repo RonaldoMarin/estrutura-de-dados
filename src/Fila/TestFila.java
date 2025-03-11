@@ -24,6 +24,5 @@ public class TestFila {
 
         fila.printQueue();
         System.out.println("Capacidade: " + fila.capacidade);
-        System.out.println("Capacidade: " + fila.seeQuantity());
     }
 }
